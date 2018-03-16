@@ -65,20 +65,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -150,20 +142,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -213,20 +197,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -276,20 +252,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -350,20 +318,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -434,20 +394,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -530,20 +482,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -626,20 +570,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -722,20 +658,12 @@
         "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
         "name" : "Ignition",
         "timeZone" : "America/New_York",
-        "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-        "awsSecretKey" : "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",
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : [ "Staging", "Production" ],
         "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "instanceInfo" : {
-          "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-          "loggingDays" : 0,
-          "executionDays" : 0,
-          "changeHistoryCount" : 0
-        },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+        "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
       },
       "version" : 77,
       "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
@@ -766,20 +694,12 @@
     "privateKey" : "2fece55e-3870-46ce-b35e-e75f43514cf7",
     "name" : "Ignition",
     "timeZone" : "America/New_York",
-    "awsAccessKey" : "AKIAJ2L4GYCMWV6XZP5A",
-    "awsSecretKey" : "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",
     "applicationURL" : "http://demo.ignitiontransform.com",
     "awsRegion" : "us-east-1",
     "environments" : [ "Staging", "Production" ],
     "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-    "instanceInfo" : {
-      "id" : "b3e74db0-bf14-47b5-8957-74c80cb7ece8",
-      "loggingDays" : 0,
-      "executionDays" : 0,
-      "changeHistoryCount" : 0
-    },
     "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-    "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
+    "sourceControlUser" : "bf55e87e4f7426c4e8c78bc0cf229b788126cc89"
   },
   "version" : 77,
   "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
