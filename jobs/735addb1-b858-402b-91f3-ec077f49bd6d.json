@@ -3,44 +3,52 @@
   "name" : "Demo Aptos Pricing to Commerce Cloud",
   "enabled" : false,
   "tasks" : [ {
-    "id" : "b0e1c26f-e6fa-43bd-97eb-f883abf6b123",
+    "id" : "13b7bb33-e89d-4250-8c17-360ede181725",
     "ordinal" : 1,
     "taskParameters" : [ {
-      "id" : "c4dd2784-0573-4447-9941-da8a7edf0328",
+      "id" : "6f81c059-2f84-4ca6-94d4-806199165869",
       "ordinal" : 1,
       "value" : "demo",
       "desc" : "User to login to ftp",
       "name" : "user",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "4f75fa01-c582-49aa-8f20-1b48462a8b28"
+      "refId" : "4f75fa01-c582-49aa-8f20-1b48462a8b28",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 653000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 653000000 ]
     }, {
-      "id" : "60db4738-8f2e-4527-9d46-8f73485d8e00",
+      "id" : "b29b1465-ea99-418d-971c-8f61dd228ddb",
       "ordinal" : 2,
       "value" : "ignition",
       "desc" : "Password to login to ftp",
       "name" : "password",
       "valueType" : 0,
       "secret" : true,
-      "refId" : "48fbf631-e014-45ee-a8eb-298ac7d1fa21"
+      "refId" : "48fbf631-e014-45ee-a8eb-298ac7d1fa21",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 655000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 655000000 ]
     }, {
-      "id" : "90358e9a-b0b1-4005-8ec8-643a3d10a0ea",
+      "id" : "b38b03ba-e2b0-496d-954f-49369fd87ff7",
       "ordinal" : 3,
       "value" : "ftps://ftps.ignitiontransform.com/input/aptos-products.xml",
       "desc" : "Url to file",
       "name" : "url",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "45c250b3-72b5-4d81-a392-6ab7c6f5709d"
+      "refId" : "45c250b3-72b5-4d81-a392-6ab7c6f5709d",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 655000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 655000000 ]
     }, {
-      "id" : "db26fbaa-a085-47b0-a489-ddf44bf194b3",
+      "id" : "3566bd17-6fe6-4120-9348-2bbaeb034de5",
       "ordinal" : 4,
       "value" : "AptosPricingFile",
       "desc" : "Key name of output file",
       "name" : "outputKey",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "201b77ea-8e35-4c3c-9f45-dd8afc123e10"
+      "refId" : "201b77ea-8e35-4c3c-9f45-dd8afc123e10",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 656000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 656000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -70,10 +78,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Download File to Map Task",
@@ -86,40 +94,46 @@
     "reportOnError" : true,
     "notify" : true,
     "nodeEligible" : true,
-    "fileLocation" : "/home/demo/input/tnode/^aptos-products.xml$",
     "interval" : 3,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 335000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 652000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 54, 790000000 ],
     "nodeTask" : false
   }, {
-    "id" : "997171b5-156d-4ce2-b05c-5a2521729c78",
-    "ordinal" : 2,
+    "id" : "7214e100-261a-4649-909d-4ba99425ec63",
+    "ordinal" : 4,
     "taskParameters" : [ {
-      "id" : "aff14978-a195-43ff-ae7f-2767ffb86740",
+      "id" : "d902ae91-b622-4db4-af0e-ef6aa45390d1",
       "ordinal" : 1,
       "value" : "AptosPricingFile",
       "desc" : "Key name of input file\n",
       "name" : "inputKey",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "33b71961-09fb-4f69-9df8-46721a14b8a4"
+      "refId" : "33b71961-09fb-4f69-9df8-46721a14b8a4",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 657000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 657000000 ]
     }, {
-      "id" : "d33f23bf-f4bf-42b3-800d-780680509435",
+      "id" : "582639f7-49f8-4a36-b489-166c29ccc2d6",
       "ordinal" : 2,
       "value" : "AptosPricingMap",
       "desc" : "Key name to hold return value in dictionary",
       "name" : "outputKey",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "f1628808-0116-4d32-bff0-af0cb53d06b2"
+      "refId" : "f1628808-0116-4d32-bff0-af0cb53d06b2",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 658000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 658000000 ]
     }, {
-      "id" : "b996ad01-485f-4dbf-a34e-ee3e92fd89ee",
+      "id" : "6dfd7a1c-2ce0-46d5-a8a9-cd832e53899a",
       "ordinal" : 4,
       "value" : "/Products/Product",
       "desc" : "Node to Break the row on",
       "name" : "rowIndicator",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "be88cc2e-5ba9-4277-a484-1d8146b78565"
+      "refId" : "be88cc2e-5ba9-4277-a484-1d8146b78565",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 658000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 658000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -149,10 +163,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "XML to Map Task",
@@ -166,20 +180,23 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 10,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 342000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 656000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 916000000 ],
     "nodeTask" : false
   }, {
-    "id" : "a7e98caa-96da-4fb2-bceb-1c45f96fbdfa",
-    "ordinal" : 3,
+    "id" : "d8b5e2b3-d77a-4899-bf8b-e745d7f36d43",
+    "ordinal" : 5,
     "taskParameters" : [ {
-      "id" : "74b3b11c-428e-4edb-a6b4-c75c9859e8fd",
+      "id" : "4900f6de-8015-4893-913a-527086441d3d",
       "ordinal" : 1,
-      "value" : "var inDebug = dict.inDebug; \ninclude('global');\n\nvar deleteFileTask = new com.ignitioncommerce.transform.tasks.core.DeleteFileTask();\n\nvar root = new java.util.HashMap();\nvar pricebooks = new java.util.ArrayList();\nvar pricebook = new java.util.HashMap();\npricebook.put(\"priceBookId\", \"listPrices\");\npricebook.put(\"currency\", \"USD\");\npricebook.put(\"onlineFlag\", \"true\");\nvar pricerecords = new java.util.ArrayList();\nvar sdf = new java.text.SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ss\");\n\nvar pricingIterator = ICT.MAP.ITERATOR('AptosPricingMap');\nwhile (pricingIterator.hasNext()) {\n  var pricingRecord = pricingIterator.next();\n  var record = new java.util.HashMap();\n  record.put(\"productId\", ICT.MAP.TEXT(pricingRecord, 'ProductID'));\n  record.put(\"onlineFrom\", sdf.format(new java.util.Date()));\n  record.put(\"onlineTo\", sdf.format(new java.util.Date()));\n  record.put(\"quantity\", 1);\n  record.put(\"amount\", ICT.MAP.TEXT(pricingRecord.Price, 'PriceSale'));\n  pricerecords.add(record);\n}\npricebook.put(\"Prices\", pricerecords);\n\npricebooks.add(pricebook);\nroot.put(\"Pricebooks\", pricebooks);\ndict.put(\"Root\", root);\n",
+      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n\nvar deleteFileTask = new com.ignitioncommerce.transform.tasks.core.DeleteFileTask();\n\nvar root = new java.util.HashMap();\nvar pricebooks = new java.util.ArrayList();\nvar pricebook = new java.util.HashMap();\npricebook.put(\"priceBookId\", \"listPrices\");\npricebook.put(\"currency\", \"USD\");\npricebook.put(\"onlineFlag\", \"true\");\nvar pricerecords = new java.util.ArrayList();\nvar sdf = new java.text.SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ss\");\n\nvar pricingIterator = ICT.MAP.ITERATOR('AptosPricingMap');\nwhile (pricingIterator.hasNext()) {\n  var pricingRecord = pricingIterator.next();\n  var record = new java.util.HashMap();\n  record.put(\"productId\", ICT.MAP.TEXT(pricingRecord, 'ProductID'));\n  record.put(\"onlineFrom\", sdf.format(new java.util.Date()));\n  record.put(\"onlineTo\", sdf.format(new java.util.Date()));\n  record.put(\"quantity\", 1);\n  record.put(\"amount\", ICT.MAP.TEXT(pricingRecord.Price, 'PriceSale'));\n  pricerecords.add(record);\n}\npricebook.put(\"Prices\", pricerecords);\n\npricebooks.add(pricebook);\nroot.put(\"Pricebooks\", pricebooks);\ndict.put(\"Root\", root);\n",
       "desc" : "Script to execute",
       "name" : "script",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed"
+      "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 659000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 659000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -209,10 +226,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Script Task",
@@ -226,13 +243,14 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 10,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 349000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 659000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 921000000 ],
     "nodeTask" : false
   }, {
-    "id" : "d49d250e-b7cf-42d5-896a-d01f41212d93",
-    "ordinal" : 4,
+    "id" : "4d6b9d28-6320-45cc-8989-39198fe416cd",
+    "ordinal" : 6,
     "taskParameters" : [ {
-      "id" : "e8a23249-4d7c-43d7-ae97-53f2857bb756",
+      "id" : "32bd47a5-4a2c-46cf-96f3-18f12f07cd65",
       "ordinal" : 1,
       "value" : "$includeScript('global');\n\nvar inDebug = dict.inDebug; \n\nvar root = new java.util.LinkedHashMap();\nvar pricebooks = new java.util.ArrayList();\nvar pricebook = new java.util.LinkedHashMap();\nvar pricebookContainer = new java.util.LinkedHashMap();\nvar header = new java.util.LinkedHashMap();\n\nheader.put(\"@pricebook-id\", \"listPrices\");\nheader.put(\"currency\", \"USD\");\nheader.put(\"online-flag\", \"true\");\npricebook.put(\"header\", header);\npricebookContainer.put(\"pricebook\", pricebook);\nvar pricerecords = new java.util.ArrayList();\nvar sdf = new java.text.SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ss\");\n\nvar pricingIterator = ICT.MAP.ITERATOR('AptosPricingMap');\nwhile (pricingIterator.hasNext()) {\n  var pricingRecord = pricingIterator.next();\n  var priceTable = new java.util.LinkedHashMap();\n  var price = new java.util.LinkedHashMap();\n  priceTable.put(\"price-table\", price);\n  price.put(\"@product-id\", ICT.MAP.TEXT(pricingRecord, 'ProductID'));\n  price.put(\"online-from\", sdf.format(new java.util.Date()));\n  price.put(\"online-to\", sdf.format(new java.util.Date()));\n  price.put(\"amount\", ICT.MAP.TEXT(pricingRecord.Price, 'PriceSale'));\n  price.put(\"amount@quantity\", 1);\n  pricerecords.add(priceTable);\n}\n\npricebook.put(\"price-tables\", pricerecords);\npricebooks.add(pricebookContainer);\n\nroot.put(\"pricebooks\", pricebooks);\nroot.put(\"pricebooks@xmlns\", \"http://www.demandware.com/xml/impex/pricebook/2006-10-31\");\n\ndict.put(\"Root\", root);\n",
       "desc" : "Script to execute",
@@ -240,8 +258,8 @@
       "valueType" : 2,
       "secret" : false,
       "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
-      "created" : [ 2018, 3, 11, 17, 37, 7, 210000000 ],
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 497000000 ]
+      "created" : [ 2018, 3, 12, 12, 38, 51, 660000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 660000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -271,14 +289,14 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Script Task",
-    "comment" : "Map to Xml example",
+    "comment" : "Map 2 Xml Test Bed",
     "clazz" : "com.ignitioncommerce.transform.tasks.core.ScriptTask",
     "enabled" : true,
     "desc" : "Task used to execute custom javascript",
@@ -288,34 +306,34 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 0,
-    "created" : [ 2018, 3, 11, 17, 37, 7, 208000000 ],
-    "updated" : [ 2018, 3, 11, 17, 37, 32, 144000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 660000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 926000000 ],
     "nodeTask" : false
   }, {
-    "id" : "f6dd67bf-e0f0-4050-8569-6e280a7409f9",
-    "ordinal" : 5,
+    "id" : "d509615e-5c35-4ee7-9b8c-1a0b7b0e5afc",
+    "ordinal" : 7,
     "taskParameters" : [ {
-      "id" : "4d626506-293a-40c0-bf12-e56092cb86eb",
+      "id" : "11f087ea-3c78-4e28-9959-625e193f1809",
       "ordinal" : 1,
       "value" : "Root",
       "desc" : "Key name of input.",
-      "name" : "InputKey",
+      "name" : "inputKey",
       "valueType" : 0,
       "secret" : false,
       "refId" : "19cf42e8-0f0d-4244-b015-3f67c88465a4",
-      "created" : [ 2018, 3, 11, 17, 35, 32, 571000000 ],
-      "updated" : [ 2018, 3, 11, 17, 36, 6, 207000000 ]
+      "created" : [ 2018, 3, 12, 12, 38, 51, 662000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 662000000 ]
     }, {
-      "id" : "63537bc2-7f42-4b80-a2a8-5ec40f440538",
+      "id" : "8bfe8873-c48a-4e98-ac2e-0b56f300271c",
       "ordinal" : 2,
       "value" : "PricingFile",
       "desc" : "Key name of output.",
-      "name" : "OutputKey",
+      "name" : "outputKey",
       "valueType" : 0,
       "secret" : false,
       "refId" : "85ca9a8d-d29e-4680-9a76-f32ba6e35b7c",
-      "created" : [ 2018, 3, 11, 17, 35, 32, 575000000 ],
-      "updated" : [ 2018, 3, 11, 17, 36, 19, 367000000 ]
+      "created" : [ 2018, 3, 12, 12, 38, 51, 662000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 662000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -345,10 +363,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Map to Xml Task",
@@ -361,39 +379,45 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 0,
-    "created" : [ 2018, 3, 11, 17, 35, 32, 568000000 ],
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 361000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 661000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 930000000 ],
     "nodeTask" : false
   }, {
-    "id" : "6a9e08b2-92d5-41dc-ad8b-c6b25e0ebcf5",
-    "ordinal" : 6,
+    "id" : "e5363234-a550-4b4c-90a1-5a6c801627f7",
+    "ordinal" : 8,
     "taskParameters" : [ {
-      "id" : "485203e1-ea4c-4dee-8b6c-7a08688d3dc7",
+      "id" : "effd280e-bc07-4928-b25a-cfc8ec1f2307",
       "ordinal" : 1,
       "value" : "Root",
       "desc" : "Key name of input ",
       "name" : "inputKey",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "e2963db8-9c7d-4863-b1ec-7a1bf15dbd52"
+      "refId" : "e2963db8-9c7d-4863-b1ec-7a1bf15dbd52",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 663000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 663000000 ]
     }, {
-      "id" : "a02c095c-321d-443e-a462-60d0672ae317",
+      "id" : "b9c4b1b7-34a8-4667-8410-89ba30533500",
       "ordinal" : 2,
       "value" : "<#compress>\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<pricebooks xmlns=\"http://www.demandware.com/xml/impex/pricebook/2006-10-31\">\t\n\t<#list Pricebooks as pricebook>\n    <pricebook>\n        <header pricebook-id=\"${pricebook.priceBookId}\">\n            <currency>${pricebook.currency}</currency>\n            <online-flag>${pricebook.onlineFlag}</online-flag>\n        </header>\n        <price-tables>\n        \t<#list pricebook.Prices as price>\n            <price-table product-id=\"${price.productId}\">\n                <online-from>${price.onlineFrom}</online-from>\n                <online-to>${price.onlineTo}</online-to>\n                <amount quantity=\"${price.quantity}\">${price.amount}</amount>\n            </price-table>\n            </#list>\n        </price-tables>\n    </pricebook>\n    </#list>\n</pricebooks>\n</#compress>",
       "desc" : "Template to use",
       "name" : "template",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "ed2bc33b-2474-4c9f-a7bb-80183abe53cf"
+      "refId" : "ed2bc33b-2474-4c9f-a7bb-80183abe53cf",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 664000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 664000000 ]
     }, {
-      "id" : "23b30485-d3c0-48ee-844f-da3ac5923b3a",
+      "id" : "fb8e8bb7-fcf2-447f-a10a-35f1fea5e6a8",
       "ordinal" : 3,
       "value" : "PricingFile",
       "desc" : "Key name of output ",
       "name" : "outputKey",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "be1f40ef-6389-4aa3-9124-4231b715107a"
+      "refId" : "be1f40ef-6389-4aa3-9124-4231b715107a",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 666000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 666000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -423,10 +447,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Freemarker Execute Task",
@@ -440,47 +464,56 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 10,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 368000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 663000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 935000000 ],
     "nodeTask" : false
   }, {
-    "id" : "66da32ee-1530-43cf-a942-db6cffda8101",
-    "ordinal" : 7,
+    "id" : "5c95b657-f84c-440b-b9dd-261d21021ddf",
+    "ordinal" : 9,
     "taskParameters" : [ {
-      "id" : "9193d9f8-ccf0-4200-a1ea-11dd163a1ac7",
+      "id" : "5780ae5a-039b-4da5-9187-3876d2ce332b",
       "ordinal" : 1,
       "value" : "demo",
       "desc" : "User to login to ftp",
       "name" : "user",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7"
+      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 667000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 667000000 ]
     }, {
-      "id" : "993af6bf-7e62-4bc5-8e24-25e5b46708ca",
+      "id" : "c02fab5f-097a-4c59-b523-f21e4de19aa4",
       "ordinal" : 2,
       "value" : "ignition",
       "desc" : "Password to login to ftp",
       "name" : "password",
       "valueType" : 0,
       "secret" : true,
-      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3"
+      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 669000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 669000000 ]
     }, {
-      "id" : "e11a86e0-982a-4e11-964a-0e8d02a82e7a",
+      "id" : "68d3d0a8-c689-4abc-8feb-4355c36082c1",
       "ordinal" : 3,
       "value" : "${ \n\tvar sdf = new java.text.SimpleDateFormat(\"yyyyMMdd'_'HHmmss\"); \n\t\"ftps://ftps.ignitiontransform.com/output/aptos-pricing-\" + sdf.format(new java.util.Date()) + \".xml\"; \n}",
       "desc" : "Url to file",
       "name" : "url",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2"
+      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 670000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 670000000 ]
     }, {
-      "id" : "72be3bc6-4e6c-4fdc-9782-b94964d78fb7",
+      "id" : "6d6f8485-d3ad-422a-91ec-a5c85323b504",
       "ordinal" : 4,
       "value" : "PricingFile",
       "desc" : "Key name of input file",
       "name" : "inputKey",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01"
+      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 670000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 670000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -510,10 +543,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Upload file from Map Task",
@@ -527,47 +560,56 @@
     "notify" : false,
     "nodeEligible" : true,
     "interval" : 10,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 375000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 666000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 940000000 ],
     "nodeTask" : false
   }, {
-    "id" : "dc690887-7545-461e-ac8c-b641e7209173",
-    "ordinal" : 8,
+    "id" : "7dffff16-ab9d-4f27-98c6-ffd023f1888a",
+    "ordinal" : 10,
     "taskParameters" : [ {
-      "id" : "4457620a-ebd1-418e-a20c-3a6350ab160a",
+      "id" : "f46a8093-3636-410f-b8d3-cdb3cf47a782",
       "ordinal" : 1,
       "value" : "demo",
       "desc" : "User to login to ftp",
       "name" : "user",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7"
+      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 672000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 672000000 ]
     }, {
-      "id" : "9f3781c5-07eb-4870-8193-972666593b4b",
+      "id" : "4ceb99c5-8ce8-409c-8afe-47e02ebf2540",
       "ordinal" : 2,
       "value" : "ignition",
       "desc" : "Password to login to ftp",
       "name" : "password",
       "valueType" : 0,
       "secret" : true,
-      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3"
+      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 673000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 673000000 ]
     }, {
-      "id" : "c109aee3-4078-445f-99c3-e54afbedf1c7",
+      "id" : "cd8a3c90-dd19-45e2-894d-886e782f8d50",
       "ordinal" : 3,
       "value" : "${ \n\tvar sdf = new java.text.SimpleDateFormat(\"yyyyMMdd'_'HHmmss\"); \n\t\"ftps://ftps.ignitiontransform.com/output/archive/aptos-pricing-\" + sdf.format(new java.util.Date()) + \".xml\"; \n}",
       "desc" : "Url to file",
       "name" : "url",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2"
+      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 674000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 674000000 ]
     }, {
-      "id" : "eabad064-5478-47c0-b0ae-0b4eb6f4970f",
+      "id" : "56e941db-fc66-4390-8b9e-9ebb4b6692d6",
       "ordinal" : 4,
       "value" : "PricingFile",
       "desc" : "Key name of input file",
       "name" : "inputKey",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01"
+      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 675000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 675000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -597,10 +639,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Upload file from Map Task",
@@ -614,47 +656,56 @@
     "notify" : false,
     "nodeEligible" : true,
     "interval" : 10,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 382000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 671000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 944000000 ],
     "nodeTask" : false
   }, {
-    "id" : "d2004f70-0af5-488b-a6e8-97d995f711b2",
-    "ordinal" : 9,
+    "id" : "6ef3b18d-7225-4848-9048-37cfa61aaf25",
+    "ordinal" : 11,
     "taskParameters" : [ {
-      "id" : "2d0c37f3-1a6c-4bfc-bedf-a8e74d90682c",
+      "id" : "e0820884-d215-404f-8139-846b6e0c3070",
       "ordinal" : 1,
       "value" : "demo",
       "desc" : "User to login to ftp",
       "name" : "user",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "635b54b6-80c9-409e-8e4b-9a45f65346e0"
+      "refId" : "635b54b6-80c9-409e-8e4b-9a45f65346e0",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 676000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 676000000 ]
     }, {
-      "id" : "59c33587-c5ff-4a3a-b9a5-3ef552eeb215",
+      "id" : "de346d88-75b1-4cf3-8b90-7ecbbd137adf",
       "ordinal" : 2,
       "value" : "ignition",
       "desc" : "Password to login to ftp",
       "name" : "password",
       "valueType" : 0,
       "secret" : true,
-      "refId" : "7480f746-29c6-4512-84ce-d29bb8300938"
+      "refId" : "7480f746-29c6-4512-84ce-d29bb8300938",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 677000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 677000000 ]
     }, {
-      "id" : "4c0c4d9e-1a2c-446c-a938-50f5160b569f",
+      "id" : "1be37f1a-79e8-45d6-9027-767ad94a8a0e",
       "ordinal" : 3,
       "value" : "ftps://ftps.ignitiontransform.com/input",
       "desc" : "Url to file",
       "name" : "url",
       "valueType" : 2,
       "secret" : false,
-      "refId" : "364aafc2-15f8-45f8-8d24-fdda3b97acb1"
+      "refId" : "364aafc2-15f8-45f8-8d24-fdda3b97acb1",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 677000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 677000000 ]
     }, {
-      "id" : "fe957b7a-343d-49fb-a1c2-8cc36e98022a",
+      "id" : "125f672f-7101-42fa-a179-6408f39de7b1",
       "ordinal" : 4,
       "value" : "AptosPricingFile",
       "desc" : "Map entry for list of transform file info objects to delete. ",
       "name" : "fileRefInMap",
       "valueType" : 0,
       "secret" : false,
-      "refId" : "15923028-19d5-45d5-847d-f558bbfe41a7"
+      "refId" : "15923028-19d5-45d5-847d-f558bbfe41a7",
+      "created" : [ 2018, 3, 12, 12, 38, 51, 677000000 ],
+      "updated" : [ 2018, 3, 12, 12, 38, 51, 677000000 ]
     } ],
     "job" : {
       "id" : "735addb1-b858-402b-91f3-ec077f49bd6d",
@@ -684,10 +735,10 @@
           "changeHistoryCount" : 0
         },
         "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-        "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+        "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
       },
-      "version" : 25,
-      "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+      "version" : 77,
+      "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
       "folder" : { }
     },
     "name" : "Delete File Task",
@@ -700,7 +751,8 @@
     "notify" : false,
     "nodeEligible" : true,
     "interval" : 0,
-    "updated" : [ 2018, 3, 11, 17, 37, 29, 389000000 ],
+    "created" : [ 2018, 3, 12, 12, 38, 51, 675000000 ],
+    "updated" : [ 2018, 3, 15, 12, 54, 26, 949000000 ],
     "nodeTask" : false
   } ],
   "desc" : "Demo transformation of Aptos Pricing to Commerce Cloud xml",
@@ -727,9 +779,9 @@
       "changeHistoryCount" : 0
     },
     "sourceControlProvider" : "https://api.github.com/repos/msewell2112/ignitiontransform",
-    "sourceControlUser" : "8ab7b21e21baebfa19f1556484f17a19c7a53d72"
+    "sourceControlUser" : "165a881bbac78d31df91b8a1bb13666bd7443e7e"
   },
-  "version" : 25,
-  "updated" : [ 2018, 3, 12, 9, 19, 17, 502000000 ],
+  "version" : 77,
+  "updated" : [ 2018, 3, 15, 12, 54, 54, 798000000 ],
   "folder" : { }
 }
