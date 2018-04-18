@@ -1,7 +1,7 @@
 {
   "id" : "7da126ce-2497-4787-891a-eb42fdfb9b03",
-  "name" : "global",
-  "desc" : "Global Template",
+  "name" : "global3-test4",
+  "desc" : "Global Template3-test4",
   "resourceType" : "Template",
   "source" : "<#macro incx map key>   \n  <#if map[key]?? > \n    <${key}>${map[key]}</${key}>    \n  </#if> \n</#macro>\n<#macro inc map key>   \n  <#if map[key]?? > \n    <#nested>\n  </#if> \n</#macro>",
   "domain" : {
@@ -17,7 +17,7 @@
   "displayValue" : "<#macro incx map key>   \n  <#if map[key]?? > \n    <${key}>${map[key]}</${key}>    \n  </#if> \n</#macro>\n",
   "environment" : "Staging",
   "created" : [ 2018, 3, 8, 22, 27, 2, 293000000 ],
-  "updated" : [ 2018, 3, 9, 14, 9, 6, 34000000 ],
-  "version" : 3,
+  "updated" : [ 2018, 4, 18, 14, 18, 57, 280000000 ],
+  "version" : 5,
   "folder" : { }
 }
