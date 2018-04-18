@@ -8,7 +8,7 @@
     "taskParameters" : [ {
       "id" : "efa43cbd-61b4-408b-b97c-11c3a8eea950",
       "ordinal" : 1,
-      "value" : "someVariable",
+      "value" : "updateVar2",
       "desc" : "Left Hand Parameter (left of equal)",
       "name" : "leftParam",
       "valueType" : 0,
@@ -16,7 +16,7 @@
       "refId" : "872220ae-b87f-4ee4-8f74-b818960e521f",
       "refValue" : "someVariable",
       "created" : [ 2018, 4, 18, 7, 54, 50, 736000000 ],
-      "updated" : [ 2018, 4, 18, 7, 54, 50, 736000000 ]
+      "updated" : [ 2018, 4, 18, 3, 56, 18, 182000000 ]
     }, {
       "id" : "e7509b65-1bd9-4dbd-b11a-fae0ad84b6b7",
       "ordinal" : 2,
@@ -49,7 +49,7 @@
         "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
       "version" : 2,
-      "updated" : [ 2018, 4, 18, 7, 54, 50, 728000000 ],
+      "updated" : [ 2018, 4, 18, 7, 56, 41, 155000000 ],
       "created" : [ 2018, 4, 18, 7, 54, 37, 56000000 ],
       "folder" : { }
     },
@@ -64,7 +64,59 @@
     "nodeEligible" : false,
     "interval" : 0,
     "created" : [ 2018, 4, 18, 7, 54, 50, 732000000 ],
-    "updated" : [ 2018, 4, 18, 7, 54, 50, 732000000 ],
+    "updated" : [ 2018, 4, 18, 7, 56, 41, 160000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "4a55c156-2c69-469a-8c90-9a028976749b",
+    "ordinal" : 2,
+    "taskParameters" : [ {
+      "id" : "02720213-fdb8-4cbb-add5-61857fa1dcd5",
+      "ordinal" : 1,
+      "value" : "http://host.com/executeme",
+      "desc" : "Url to call",
+      "name" : "url",
+      "valueType" : 0,
+      "secret" : false,
+      "refId" : "1305b82d-767b-45c5-8be4-3949547c4b81",
+      "refValue" : "http://host.com/executeme",
+      "created" : [ 2018, 4, 18, 7, 56, 26, 9000000 ],
+      "updated" : [ 2018, 4, 18, 7, 56, 26, 9000000 ]
+    } ],
+    "job" : {
+      "id" : "7b8c20d6-23d1-45eb-ae54-d8f26b3af915",
+      "name" : "Testing",
+      "enabled" : false,
+      "desc" : "TestJob",
+      "key" : "IC-00000016",
+      "readOnly" : true,
+      "environment" : "Staging",
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : [ "Staging", "Production" ],
+        "updated" : null,
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
+      },
+      "version" : 2,
+      "updated" : [ 2018, 4, 18, 7, 56, 41, 155000000 ],
+      "created" : [ 2018, 4, 18, 7, 54, 37, 56000000 ],
+      "folder" : { }
+    },
+    "name" : "Callback Task",
+    "clazz" : "com.ignitioncommerce.transform.tasks.core.CallbackTask",
+    "enabled" : false,
+    "desc" : "Do http post of data from map.",
+    "refId" : "78ac5bf7-e646-4720-8ac1-34743cdb26a4",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 4, 18, 7, 56, 26, 6000000 ],
+    "updated" : [ 2018, 4, 18, 7, 56, 26, 6000000 ],
     "nodeTask" : false
   } ],
   "desc" : "TestJob",
@@ -82,7 +134,7 @@
     "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
   },
   "version" : 2,
-  "updated" : [ 2018, 4, 18, 7, 54, 50, 728000000 ],
+  "updated" : [ 2018, 4, 18, 7, 56, 41, 155000000 ],
   "created" : [ 2018, 4, 18, 7, 54, 37, 56000000 ],
   "folder" : { }
 }
