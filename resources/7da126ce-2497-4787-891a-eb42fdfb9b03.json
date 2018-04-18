@@ -1,0 +1,23 @@
+{
+  "id" : "7da126ce-2497-4787-891a-eb42fdfb9b03",
+  "name" : "global",
+  "desc" : "Global Template",
+  "resourceType" : "Template",
+  "source" : "<#macro incx map key>   \n  <#if map[key]?? > \n    <${key}>${map[key]}</${key}>    \n  </#if> \n</#macro>\n<#macro inc map key>   \n  <#if map[key]?? > \n    <#nested>\n  </#if> \n</#macro>",
+  "domain" : {
+    "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+    "name" : null,
+    "timeZone" : null,
+    "applicationURL" : null,
+    "awsRegion" : null,
+    "environments" : null,
+    "updated" : null,
+    "created" : null
+  },
+  "displayValue" : "<#macro incx map key>   \n  <#if map[key]?? > \n    <${key}>${map[key]}</${key}>    \n  </#if> \n</#macro>\n",
+  "environment" : "Staging",
+  "created" : [ 2018, 3, 8, 22, 27, 2, 293000000 ],
+  "updated" : [ 2018, 3, 9, 14, 9, 6, 34000000 ],
+  "version" : 3,
+  "folder" : { }
+}
