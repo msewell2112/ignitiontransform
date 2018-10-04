@@ -1,0 +1,288 @@
+{
+  "id" : "533445f1-e35a-4af9-9ba6-1588728e7983",
+  "name" : "Kibo-Google Products",
+  "enabled" : false,
+  "tasks" : [ {
+    "id" : "75bf2285-2063-4ba6-b664-115c9afab7b6",
+    "ordinal" : 1,
+    "taskParameters" : [ {
+      "id" : "e6ba52b4-48de-4fcb-bf43-cc7364530161",
+      "ordinal" : 1,
+      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n$includeScript('Kibo');\n\nvar kiboProducts = KIBO.GetCatalog();\n\ntry {\n\n     dict.put(\"root\", _generateFeed(ICT.MAP.ITERATOR('kiboProducts'), function(record, row) {\n        // Here is where you can modify the object graph that was build up in the \n        // internal function _generateFeed.  For example, I could add a custom\n        // attribute by...\n         //row.put('customfield', record['My Value']);\n        return row;\n    }));\n\n\n} catch (err) {\n    var errMessage = 'An error occurred while trying to generate google feed file: ' + err;\n    ICT.TASK_ERROR('Kibo -> Google Products  File -> Error', errMessage);    \n}\n\n//#region PRIVATE\n/**\n * This is meant to be a private function.  Do not modify.  Any modification\n * should be done in the processRow function passed into this function\n */\nfunction _generateFeed(productIter, processRow) {\n    var root = new java.util.HashMap();\n    var newRecords = new java.util.ArrayList();\n    while ( productIter.hasNext()) {\n        var  productRecord =  productIter.next();\n        var item = {\n            'product_id':  productRecord.productCode,\n            'product_name':  productRecord.content.productName,\n            'product_description':  productRecord.content.productFullDescription,\n            'product_url':  productRecord.content.seoFriendlyUrl,  \n            'product_price_default':  productRecord.price.catalogListPrice,\n            'product_type':  productRecord.productType,\n            'product_brand': ICT.NONULL(productRecord.Brand),\n            'product_image_link': productRecord.content.productImages[0].imageUrl,\n            'upc': ICT.NONULL(productRecord.mfgPartNumber),\n            'product_manufacturer_name': ICT.NONULL(productRecord.ProductExtra1),\n            'product_availability': productRecord.isActive\n        };\n        newRecords.add(processRow(productRecord, item));\n    }\n    root.put(\"records\", newRecords);\n    return root;\n}\n//#endregion\n    ",
+      "desc" : "Script to execute",
+      "name" : "script",
+      "valueType" : 2,
+      "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
+      "refValue" : "Javascript",
+      "created" : [ 2018, 9, 20, 14, 56, 29, 278000000 ],
+      "updated" : [ 2018, 10, 4, 14, 23, 47, 182000000 ]
+    } ],
+    "job" : {
+      "id" : "533445f1-e35a-4af9-9ba6-1588728e7983",
+      "name" : "Kibo-Google Products",
+      "enabled" : false,
+      "desc" : "Kibo-Google Products",
+      "key" : "IC-00000046",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 20,
+      "updated" : [ 2018, 10, 4, 14, 26, 14, 608000000 ],
+      "created" : [ 2018, 9, 20, 14, 54, 42, 542000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Script Task",
+    "clazz" : "core.ScriptTask",
+    "enabled" : true,
+    "desc" : "Task used to execute custom javascript.",
+    "refId" : "f5d44f40-cbd4-45fa-b45f-b062e546ad0f",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 9, 20, 14, 56, 29, 273000000 ],
+    "updated" : [ 2018, 10, 4, 14, 24, 32, 616000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "10c70700-425a-49bc-a833-79de497bd290",
+    "ordinal" : 2,
+    "taskParameters" : [ {
+      "id" : "5c06f8d7-6542-4324-9bc5-d19d3436694d",
+      "ordinal" : 1,
+      "value" : "root",
+      "desc" : "Key name of input ",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "e2963db8-9c7d-4863-b1ec-7a1bf15dbd52",
+      "refValue" : "InputKey",
+      "created" : [ 2018, 10, 4, 14, 24, 1, 237000000 ],
+      "updated" : [ 2018, 10, 4, 14, 24, 8, 783000000 ]
+    }, {
+      "id" : "7fe9d409-1b87-4742-baa8-435af4b394d0",
+      "ordinal" : 2,
+      "value" : "${'id\\ttitle\\tdescription\\tlink\\tprice\\tbrand\\timage_link\\tgtin\\tmpn\\tproduct_type\\tavailability'}\n<#list records as map>\n    ${map.product_id+'\\t'+map.product_name+'\\t'+map.product_description+'\\t'+map.product_url+'\\t'+map.product_price_default+'\\t'+map.product_brand+'\\t'map.product_image_link+'\\t'+map.product_upc+'\\t'+map.product_manufacturer_name+'\\t'+map.product_type+'\\t'+map.product_availability} \n</#list>",
+      "desc" : "Template to use",
+      "name" : "template",
+      "valueType" : 2,
+      "refId" : "ed2bc33b-2474-4c9f-a7bb-80183abe53cf",
+      "refValue" : "<xml version=\"1.0\"><test>${test}</test>",
+      "created" : [ 2018, 10, 4, 14, 24, 1, 246000000 ],
+      "updated" : [ 2018, 10, 4, 14, 24, 25, 55000000 ]
+    }, {
+      "id" : "cd25d6fe-f551-42eb-9027-a083d5ff5ec9",
+      "ordinal" : 3,
+      "value" : "GoogleFeedFile",
+      "desc" : "Key name of output ",
+      "name" : "outputKey",
+      "valueType" : 0,
+      "refId" : "be1f40ef-6389-4aa3-9124-4231b715107a",
+      "refValue" : "OutputKey",
+      "created" : [ 2018, 10, 4, 14, 24, 1, 257000000 ],
+      "updated" : [ 2018, 10, 4, 14, 24, 16, 707000000 ]
+    } ],
+    "job" : {
+      "id" : "533445f1-e35a-4af9-9ba6-1588728e7983",
+      "name" : "Kibo-Google Products",
+      "enabled" : false,
+      "desc" : "Kibo-Google Products",
+      "key" : "IC-00000046",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 20,
+      "updated" : [ 2018, 10, 4, 14, 26, 14, 608000000 ],
+      "created" : [ 2018, 9, 20, 14, 54, 42, 542000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Freemarker Execute Task",
+    "clazz" : "core.FreemarkerExecuteTask",
+    "enabled" : true,
+    "desc" : "Task used to execute Freemarker template.",
+    "refId" : "edb872f0-243b-46ea-9149-ca967fe766e7",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 10, 4, 14, 24, 1, 228000000 ],
+    "updated" : [ 2018, 10, 4, 14, 24, 33, 327000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "fa1f427f-9d06-4159-af14-d5969a25b18c",
+    "ordinal" : 3,
+    "taskParameters" : [ {
+      "id" : "5b77be8c-131c-4337-853d-d0a3243a5f94",
+      "ordinal" : 1,
+      "value" : "!{OutputUser}",
+      "desc" : "Login user for authentication",
+      "name" : "user",
+      "valueType" : 0,
+      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
+      "refValue" : "johnny.appleseed",
+      "created" : [ 2018, 10, 4, 14, 24, 40, 229000000 ],
+      "updated" : [ 2018, 10, 4, 14, 26, 0, 252000000 ]
+    }, {
+      "id" : "b51336fc-7c9d-4357-b617-9050b95337d6",
+      "ordinal" : 2,
+      "value" : "!{OutputPwd}",
+      "desc" : "Login password for authentication",
+      "name" : "password",
+      "valueType" : 0,
+      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
+      "refValue" : "somepassword",
+      "created" : [ 2018, 10, 4, 14, 24, 40, 236000000 ],
+      "updated" : [ 2018, 10, 4, 14, 26, 6, 588000000 ]
+    }, {
+      "id" : "d1fc7f1c-90f1-41db-b057-ea0bd19d2570",
+      "ordinal" : 3,
+      "value" : "ftp://someftphost/input/myfile.xml",
+      "desc" : "URL to file",
+      "name" : "url",
+      "valueType" : 2,
+      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
+      "refValue" : "ftp://someftphost/input/myfile.xml",
+      "created" : [ 2018, 10, 4, 14, 24, 40, 245000000 ],
+      "updated" : [ 2018, 10, 4, 14, 24, 40, 245000000 ]
+    }, {
+      "id" : "46db8478-2256-45c2-ac90-b144d29288a9",
+      "ordinal" : 4,
+      "value" : "GoogleFeedFile",
+      "desc" : "Key name of input file",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
+      "refValue" : "InputFileKey",
+      "created" : [ 2018, 10, 4, 14, 24, 40, 253000000 ],
+      "updated" : [ 2018, 10, 4, 14, 25, 54, 95000000 ]
+    }, {
+      "id" : "22f13e6c-cd35-4d57-a854-ad7a9d1f39fb",
+      "ordinal" : 5,
+      "value" : "true",
+      "desc" : "Should we overwrite",
+      "name" : "overwrite",
+      "valueType" : 0,
+      "refId" : "5fa90437-e92d-468d-8890-edf5c8a0f2bc",
+      "refValue" : "true",
+      "created" : [ 2018, 10, 4, 14, 24, 40, 260000000 ],
+      "updated" : [ 2018, 10, 4, 14, 24, 40, 260000000 ]
+    } ],
+    "job" : {
+      "id" : "533445f1-e35a-4af9-9ba6-1588728e7983",
+      "name" : "Kibo-Google Products",
+      "enabled" : false,
+      "desc" : "Kibo-Google Products",
+      "key" : "IC-00000046",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 20,
+      "updated" : [ 2018, 10, 4, 14, 26, 14, 608000000 ],
+      "created" : [ 2018, 9, 20, 14, 54, 42, 542000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Upload File from Dictionary Task",
+    "clazz" : "core.UploadFileFromDictionaryTask",
+    "enabled" : true,
+    "desc" : "Task used to upload a file to FTP, SFTP, WebDav, S3, or Local from a dictionary entry.",
+    "refId" : "fb285dc7-59db-4382-b004-df6ee6147084",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : true,
+    "interval" : 0,
+    "created" : [ 2018, 10, 4, 14, 24, 40, 221000000 ],
+    "updated" : [ 2018, 10, 4, 14, 26, 14, 594000000 ],
+    "nodeTask" : false
+  } ],
+  "desc" : "Kibo-Google Products",
+  "key" : "IC-00000046",
+  "readOnly" : false,
+  "environment" : {
+    "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+    "name" : "Staging",
+    "titleCss" : ".title {\n\tcolor: #d1e4f7;\n\tbackground-color: #2991e2;\n}",
+    "updated" : [ 1970, 1, 1, 0, 0 ],
+    "created" : [ 1970, 1, 1, 0, 0 ],
+    "domain" : {
+      "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+      "name" : null,
+      "timeZone" : null,
+      "applicationURL" : null,
+      "awsRegion" : null,
+      "environments" : null,
+      "updated" : null,
+      "created" : null
+    }
+  },
+  "domain" : {
+    "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+    "name" : "Ignition",
+    "timeZone" : "America/New_York",
+    "applicationURL" : "http://demo.ignitiontransform.com",
+    "awsRegion" : "us-east-1",
+    "environments" : null,
+    "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+    "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+  },
+  "version" : 20,
+  "updated" : [ 2018, 10, 4, 14, 26, 14, 608000000 ],
+  "created" : [ 2018, 9, 20, 14, 54, 42, 542000000 ],
+  "folder" : {
+    "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+  }
+}
