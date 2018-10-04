@@ -1,0 +1,288 @@
+{
+  "id" : "d86fba58-9df1-4b4d-9176-b489c14adaa8",
+  "name" : "Kibo-Pinterest",
+  "enabled" : false,
+  "tasks" : [ {
+    "id" : "7968ee23-0008-47c1-bb2e-b4d32e64b4cb",
+    "ordinal" : 1,
+    "taskParameters" : [ {
+      "id" : "c778455b-e3a3-4a1d-b383-f621d3ddc718",
+      "ordinal" : 1,
+      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n$includeScript('Kibo');\n\nvar kiboProducts = KIBO.GetCatalog();\n\ntry {\n    dict.put(\"root\", _generateFeed(ICT.MAP.ITERATOR('kiboProducts'), function(record, row) {\n        // Here is where you can modify the object graph that was build up in the \n        // internal function _generateFeed.  For example, I could add a custom\n        // attribute by...\n        //row.put('customfield', record['My Value']);\n        return row;\n    }));\n\n} catch (err) {\n    var errMessage = 'An error occurred while trying to generate pinterest file  Exception: ' + err;\n    ICT.TASK_ERROR('Kibo-Pinterest -> Error', errMessage);    \n}\n\n\n//#region PRIVATE\n/**\n * This is meant to be a private function.  Do not modify.  Any modification\n * should be done in the processRow function passed into this function\n */\nfunction _generateFeed(pinterestIterator, processRow) {\n    var root = new java.util.HashMap();\n    var newRecords = new java.util.ArrayList();\n    while ( pinterestIterator.hasNext()) {\n        var  pinterestRecord =  pinterestIterator.next();\n        var item = {\n            'product_id':  pinterestRecord.productCode,\n            'product_name':  pinterestRecord.content.productName,\n            'product_description':  pinterestRecord.content.productFullDescription,\n            'product_url':  pinterestRecord.content.seoFriendlyUrl,  \n            'product_price_default':  pinterestRecord.price.catalogListPrice,\n            'product_type':  pinterestRecord.productType,\n            'product_brand': ICT.NONULL(pinterestRecord.Brand),\n            'product_image_link': pinterestRecord.content.productImages[0].imageUrl,\n            'upc': ICT.NONULL(pinterestRecord.mfgPartNumber),\n            'product_manufacturer_name': ICT.NONULL(pinterestRecord.ProductExtra1),\n            'product_availability': pinterest.isActive\n        };\n        newRecords.add(processRow(pinterestRecord, item));\n    }\n    root.put(\"records\", newRecords);\n    return root;\n}\n//#endregion",
+      "desc" : "Script to execute",
+      "name" : "script",
+      "valueType" : 2,
+      "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
+      "refValue" : "Javascript",
+      "created" : [ 2018, 9, 5, 12, 26, 59, 976000000 ],
+      "updated" : [ 2018, 10, 4, 14, 22, 31, 716000000 ]
+    } ],
+    "job" : {
+      "id" : "d86fba58-9df1-4b4d-9176-b489c14adaa8",
+      "name" : "Kibo-Pinterest",
+      "enabled" : false,
+      "desc" : "Kibo To Pinterest",
+      "key" : "IC-00000035",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 21,
+      "updated" : [ 2018, 10, 4, 14, 22, 31, 727000000 ],
+      "created" : [ 2018, 9, 5, 11, 58, 22, 36000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Script Task",
+    "clazz" : "core.ScriptTask",
+    "enabled" : false,
+    "desc" : "Task used to execute custom javascript.",
+    "refId" : "f5d44f40-cbd4-45fa-b45f-b062e546ad0f",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 9, 5, 12, 26, 59, 969000000 ],
+    "updated" : [ 2018, 9, 5, 12, 26, 59, 969000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "8c70932e-34c4-43a5-9f9d-7a501744200d",
+    "ordinal" : 2,
+    "taskParameters" : [ {
+      "id" : "60750edd-926b-4552-9ef0-282e6255697b",
+      "ordinal" : 1,
+      "value" : "root",
+      "desc" : "Key name of input ",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "e2963db8-9c7d-4863-b1ec-7a1bf15dbd52",
+      "refValue" : "InputKey",
+      "created" : [ 2018, 9, 5, 12, 27, 13, 457000000 ],
+      "updated" : [ 2018, 9, 5, 12, 27, 29, 318000000 ]
+    }, {
+      "id" : "214c3ba8-f2b4-44aa-a4a1-5d63532b290f",
+      "ordinal" : 2,
+      "value" : "${'id\\ttitle\\tdescription\\tlink\\tprice\\tbrand\\timage_link\\tgtin\\tmpn\\tproduct_type\\tavailability'}\n<#list records as map>\n    ${map.product_id+'\\t'+map.product_name+'\\t'+map.product_description+'\\t'+map.product_url+'\\t'+map.product_price_default+'\\t'+map.product_brand+'\\t'map.product_image_link+'\\t'+map.product_upc+'\\t'+map.product_manufacturer_name+'\\t'+map.product_type+'\\t'+map.product_availability} \n</#list>",
+      "desc" : "Template to use",
+      "name" : "template",
+      "valueType" : 2,
+      "refId" : "ed2bc33b-2474-4c9f-a7bb-80183abe53cf",
+      "refValue" : "<xml version=\"1.0\"><test>${test}</test>",
+      "created" : [ 2018, 9, 5, 12, 27, 13, 463000000 ],
+      "updated" : [ 2018, 10, 4, 13, 58, 21, 541000000 ]
+    }, {
+      "id" : "9b9ff3da-c857-4fdf-ba1d-f3edd82388df",
+      "ordinal" : 3,
+      "value" : "PinterestFile",
+      "desc" : "Key name of output ",
+      "name" : "outputKey",
+      "valueType" : 0,
+      "refId" : "be1f40ef-6389-4aa3-9124-4231b715107a",
+      "refValue" : "OutputKey",
+      "created" : [ 2018, 9, 5, 12, 27, 13, 471000000 ],
+      "updated" : [ 2018, 10, 4, 13, 59, 21, 764000000 ]
+    } ],
+    "job" : {
+      "id" : "d86fba58-9df1-4b4d-9176-b489c14adaa8",
+      "name" : "Kibo-Pinterest",
+      "enabled" : false,
+      "desc" : "Kibo To Pinterest",
+      "key" : "IC-00000035",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 21,
+      "updated" : [ 2018, 10, 4, 14, 22, 31, 727000000 ],
+      "created" : [ 2018, 9, 5, 11, 58, 22, 36000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Freemarker Execute Task",
+    "clazz" : "core.FreemarkerExecuteTask",
+    "enabled" : false,
+    "desc" : "Task used to execute Freemarker template.",
+    "refId" : "edb872f0-243b-46ea-9149-ca967fe766e7",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 9, 5, 12, 27, 13, 449000000 ],
+    "updated" : [ 2018, 9, 5, 12, 27, 13, 449000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "637c1f26-a6f2-46d8-8b76-5c6195529977",
+    "ordinal" : 3,
+    "taskParameters" : [ {
+      "id" : "3889defc-f3f9-42c0-920c-236aa319036a",
+      "ordinal" : 1,
+      "value" : "!{OutputUser}",
+      "desc" : "Login user for authentication",
+      "name" : "user",
+      "valueType" : 0,
+      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
+      "refValue" : "johnny.appleseed",
+      "created" : [ 2018, 9, 5, 12, 27, 59, 864000000 ],
+      "updated" : [ 2018, 9, 5, 12, 28, 14, 969000000 ]
+    }, {
+      "id" : "c39b5ce5-dfd1-4745-a46e-026e34412776",
+      "ordinal" : 2,
+      "value" : "!{OutputPwd}",
+      "desc" : "Login password for authentication",
+      "name" : "password",
+      "valueType" : 0,
+      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
+      "refValue" : "somepassword",
+      "created" : [ 2018, 9, 5, 12, 27, 59, 871000000 ],
+      "updated" : [ 2018, 9, 5, 12, 28, 29, 580000000 ]
+    }, {
+      "id" : "6f38360e-c731-4b0b-a3e9-0f4699271dba",
+      "ordinal" : 3,
+      "value" : "${\n    '!{OutputHost}/PinterestFile.txt';\n}",
+      "desc" : "URL to file",
+      "name" : "url",
+      "valueType" : 2,
+      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
+      "refValue" : "ftp://someftphost/input/myfile.xml",
+      "created" : [ 2018, 9, 5, 12, 27, 59, 877000000 ],
+      "updated" : [ 2018, 9, 5, 12, 28, 43, 449000000 ]
+    }, {
+      "id" : "2116b9b0-0224-42e7-bd13-994bd521f84f",
+      "ordinal" : 4,
+      "value" : "PinterestFile",
+      "desc" : "Key name of input file",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
+      "refValue" : "InputFileKey",
+      "created" : [ 2018, 9, 5, 12, 27, 59, 885000000 ],
+      "updated" : [ 2018, 10, 4, 13, 59, 16, 795000000 ]
+    }, {
+      "id" : "39cd3130-9ac8-46ed-89b7-4e43ad87fb30",
+      "ordinal" : 5,
+      "value" : "true",
+      "desc" : "Should we overwrite",
+      "name" : "overwrite",
+      "valueType" : 0,
+      "refId" : "5fa90437-e92d-468d-8890-edf5c8a0f2bc",
+      "refValue" : "true",
+      "created" : [ 2018, 9, 5, 12, 27, 59, 891000000 ],
+      "updated" : [ 2018, 9, 5, 12, 27, 59, 891000000 ]
+    } ],
+    "job" : {
+      "id" : "d86fba58-9df1-4b4d-9176-b489c14adaa8",
+      "name" : "Kibo-Pinterest",
+      "enabled" : false,
+      "desc" : "Kibo To Pinterest",
+      "key" : "IC-00000035",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 21,
+      "updated" : [ 2018, 10, 4, 14, 22, 31, 727000000 ],
+      "created" : [ 2018, 9, 5, 11, 58, 22, 36000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Upload File from Dictionary Task",
+    "clazz" : "core.UploadFileFromDictionaryTask",
+    "enabled" : false,
+    "desc" : "Task used to upload a file to FTP, SFTP, WebDav, S3, or Local from a dictionary entry.",
+    "refId" : "fb285dc7-59db-4382-b004-df6ee6147084",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : true,
+    "interval" : 0,
+    "created" : [ 2018, 9, 5, 12, 27, 59, 857000000 ],
+    "updated" : [ 2018, 9, 5, 12, 27, 59, 857000000 ],
+    "nodeTask" : false
+  } ],
+  "desc" : "Kibo To Pinterest",
+  "key" : "IC-00000035",
+  "readOnly" : false,
+  "environment" : {
+    "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+    "name" : "Staging",
+    "titleCss" : ".title {\n\tcolor: #d1e4f7;\n\tbackground-color: #2991e2;\n}",
+    "updated" : [ 1970, 1, 1, 0, 0 ],
+    "created" : [ 1970, 1, 1, 0, 0 ],
+    "domain" : {
+      "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+      "name" : null,
+      "timeZone" : null,
+      "applicationURL" : null,
+      "awsRegion" : null,
+      "environments" : null,
+      "updated" : null,
+      "created" : null
+    }
+  },
+  "domain" : {
+    "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+    "name" : "Ignition",
+    "timeZone" : "America/New_York",
+    "applicationURL" : "http://demo.ignitiontransform.com",
+    "awsRegion" : "us-east-1",
+    "environments" : null,
+    "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+    "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+  },
+  "version" : 21,
+  "updated" : [ 2018, 10, 4, 14, 22, 31, 727000000 ],
+  "created" : [ 2018, 9, 5, 11, 58, 22, 36000000 ],
+  "folder" : {
+    "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+  }
+}
