@@ -1,0 +1,292 @@
+{
+  "id" : "a6b80dc2-2329-4a15-a902-093cc013923f",
+  "name" : "Kibo-Feedonomics",
+  "enabled" : false,
+  "tasks" : [ {
+    "id" : "297c3eb8-eeb4-42e1-8ebd-9183e3f42857",
+    "ordinal" : 1,
+    "taskParameters" : [ {
+      "id" : "4ecc9dc4-1b36-4a7a-b166-7d6712bc8c96",
+      "ordinal" : 1,
+      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n$includeScript('Kibo');\n\nvar kiboProducts = KIBO.GetCatalog();\n\ntry {\n\n     dict.put(\"root\", _generateFeed(ICT.MAP.ITERATOR('kiboProducts'), function(record, row) {\n        // Here is where you can modify the object graph that was build up in the \n        // internal function _generateFeed.  For example, I could add a custom\n        // attribute by...\n         //row.put('customfield', record['My Value']);\n        return row;\n    }));\n\n\n} catch (err) {\n    var errMessage = 'An error occurred while trying to generate feedonomics file: ' + err;\n    ICT.TASK_ERROR('Kibo -> Feedonomics  File -> Error', errMessage);    \n}\n\n//#region PRIVATE\n/**\n * This is meant to be a private function.  Do not modify.  Any modification\n * should be done in the processRow function passed into this function\n */\nfunction _generateFeed(productIterator, processRow) {\n    var catalog = {\n        'catalog': {\n        }\n    };\n    var i = 0;\n    while (productIterator.hasNext()) {\n        var product = {\n            'Title': productRecord.content.productName,\n            'Description': '<![CDATA[' + productRecord.content.productFullDescription + ']]>',\n            'Price': productRecord.price.catalogListPrice,\n            'SalePrice': productRecord.price.catalogSalePrice,\n            'Availability': productRecord.isActive ? 'Available' : 'Not Available',\n            'Category': productRecord.categories[0].categoryCode,\n            'AlternateImageURL': productRecord.content.productImages[0].imageUrl,\n            'ProductUrl': productRecord.content.seoFriendlyUrl,\n            'SKU': productRecord.productCode,\n            'Brand': productRecord.brand,\n            'Color': productRecord.color,\n            'Size': productRecord.size,\n            'Condition': 'New'\n        };\n        processRow(productRecord, product);\n        catalog.catalog['product['+i+']'] = product;          \n    }\n    if (inDebug) {\n        print(JSON.stringify(catalog));\n    }\n    return catalog;\n}\n//#endregion\n    ",
+      "desc" : "Script to execute",
+      "name" : "script",
+      "valueType" : 2,
+      "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
+      "refValue" : "Javascript",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 637000000 ],
+      "updated" : [ 2018, 10, 4, 14, 22, 49, 853000000 ]
+    } ],
+    "job" : {
+      "id" : "a6b80dc2-2329-4a15-a902-093cc013923f",
+      "name" : "Kibo-Feedonomics",
+      "enabled" : false,
+      "desc" : "Kibo-Feedonomics",
+      "status" : "Ready",
+      "key" : "IC-00000043",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 17,
+      "updated" : [ 2018, 10, 4, 14, 22, 49, 864000000 ],
+      "created" : [ 2018, 10, 4, 13, 49, 25, 633000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Script Task",
+    "clazz" : "core.ScriptTask",
+    "enabled" : false,
+    "desc" : "Task used to execute custom javascript.",
+    "refId" : "f5d44f40-cbd4-45fa-b45f-b062e546ad0f",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 10, 4, 13, 49, 25, 634000000 ],
+    "updated" : [ 2018, 10, 4, 13, 49, 25, 634000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "15d85e75-6041-4e22-a49f-1ade7a63d425",
+    "ordinal" : 2,
+    "taskParameters" : [ {
+      "id" : "95d92e64-bf49-46ed-a1c4-e883ef99fdc2",
+      "ordinal" : 1,
+      "value" : "root",
+      "desc" : "Key name of input",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "19cf42e8-0f0d-4244-b015-3f67c88465a4",
+      "refValue" : "InputKey",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 641000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 641000000 ]
+    }, {
+      "id" : "59054ee8-a3d8-4ea7-92c2-360e53fc4cea",
+      "ordinal" : 2,
+      "value" : "outFeed",
+      "desc" : "Key name of output",
+      "name" : "outputKey",
+      "valueType" : 0,
+      "refId" : "85ca9a8d-d29e-4680-9a76-f32ba6e35b7c",
+      "refValue" : "OutputKey",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 642000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 642000000 ]
+    }, {
+      "id" : "5ecb04c8-7767-4a80-8987-d48455e2f9aa",
+      "ordinal" : 3,
+      "value" : "true",
+      "desc" : "true to cache to file",
+      "name" : "filePersist",
+      "valueType" : 0,
+      "refId" : "90508499-da09-4a0c-ae5c-1abb09df2ceb",
+      "refValue" : "true",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 644000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 644000000 ]
+    } ],
+    "job" : {
+      "id" : "a6b80dc2-2329-4a15-a902-093cc013923f",
+      "name" : "Kibo-Feedonomics",
+      "enabled" : false,
+      "desc" : "Kibo-Feedonomics",
+      "status" : "Ready",
+      "key" : "IC-00000043",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 17,
+      "updated" : [ 2018, 10, 4, 14, 22, 49, 864000000 ],
+      "created" : [ 2018, 10, 4, 13, 49, 25, 633000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Dictionary to Xml Task",
+    "clazz" : "core.DictionaryToXMLTask",
+    "enabled" : false,
+    "desc" : "Task used to convert a dictionary entry to xml file.",
+    "refId" : "a7958eba-812f-40bd-b0db-267cdea96427",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : false,
+    "interval" : 0,
+    "created" : [ 2018, 10, 4, 13, 49, 25, 638000000 ],
+    "updated" : [ 2018, 10, 4, 13, 49, 25, 638000000 ],
+    "nodeTask" : false
+  }, {
+    "id" : "00c1f15a-af1b-49d6-a4fd-39eecb1e6a66",
+    "ordinal" : 3,
+    "taskParameters" : [ {
+      "id" : "9748478d-d207-48c4-adbb-9f5442cd9f52",
+      "ordinal" : 1,
+      "value" : "!{OutputUser}",
+      "desc" : "Login user for authentication",
+      "name" : "user",
+      "valueType" : 0,
+      "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
+      "refValue" : "johnny.appleseed",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 648000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 648000000 ]
+    }, {
+      "id" : "75662b23-f9ee-4c49-a839-c82363373bdd",
+      "ordinal" : 2,
+      "value" : "!{OutputPwd}",
+      "desc" : "Login password for authentication",
+      "name" : "password",
+      "valueType" : 0,
+      "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
+      "refValue" : "somepassword",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 649000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 649000000 ]
+    }, {
+      "id" : "df0f5bb3-c31a-4140-9238-56825eefe78f",
+      "ordinal" : 3,
+      "value" : "${\n    'https://ignition01-alliance-prtnr-na01-dw.demandware.net/on/demandware.servlet/webdav/Sites/Impex/src/ProductExport/FeedonomicsFile.xml';\n}",
+      "desc" : "URL to file",
+      "name" : "url",
+      "valueType" : 2,
+      "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
+      "refValue" : "ftp://someftphost/input/myfile.xml",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 650000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 650000000 ]
+    }, {
+      "id" : "8f1dff1c-6028-4e0d-906a-6e12b909a227",
+      "ordinal" : 4,
+      "value" : "outFeed",
+      "desc" : "Key name of input file",
+      "name" : "inputKey",
+      "valueType" : 0,
+      "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
+      "refValue" : "InputFileKey",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 651000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 651000000 ]
+    }, {
+      "id" : "cf6263ef-bcce-44a2-b525-c355cdab0300",
+      "ordinal" : 5,
+      "value" : "true",
+      "desc" : "Should we overwrite",
+      "name" : "overwrite",
+      "valueType" : 0,
+      "refId" : "5fa90437-e92d-468d-8890-edf5c8a0f2bc",
+      "refValue" : "true",
+      "created" : [ 2018, 10, 4, 13, 49, 25, 652000000 ],
+      "updated" : [ 2018, 10, 4, 13, 49, 25, 652000000 ]
+    } ],
+    "job" : {
+      "id" : "a6b80dc2-2329-4a15-a902-093cc013923f",
+      "name" : "Kibo-Feedonomics",
+      "enabled" : false,
+      "desc" : "Kibo-Feedonomics",
+      "status" : "Ready",
+      "key" : "IC-00000043",
+      "readOnly" : false,
+      "environment" : {
+        "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+        "name" : null,
+        "titleCss" : null,
+        "updated" : null,
+        "created" : null,
+        "domain" : null
+      },
+      "domain" : {
+        "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+        "name" : "Ignition",
+        "timeZone" : "America/New_York",
+        "applicationURL" : "http://demo.ignitiontransform.com",
+        "awsRegion" : "us-east-1",
+        "environments" : null,
+        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+      },
+      "version" : 17,
+      "updated" : [ 2018, 10, 4, 14, 22, 49, 864000000 ],
+      "created" : [ 2018, 10, 4, 13, 49, 25, 633000000 ],
+      "folder" : {
+        "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+      }
+    },
+    "name" : "Upload File from Dictionary Task",
+    "clazz" : "core.UploadFileFromDictionaryTask",
+    "enabled" : false,
+    "desc" : "Task used to upload a file to FTP, SFTP, WebDav, S3, or Local from a dictionary entry.",
+    "refId" : "fb285dc7-59db-4382-b004-df6ee6147084",
+    "stopOnError" : true,
+    "reportOnError" : true,
+    "notify" : false,
+    "nodeEligible" : true,
+    "interval" : 0,
+    "created" : [ 2018, 10, 4, 13, 49, 25, 645000000 ],
+    "updated" : [ 2018, 10, 4, 13, 49, 25, 645000000 ],
+    "nodeTask" : false
+  } ],
+  "desc" : "Kibo-Feedonomics",
+  "status" : "Ready",
+  "key" : "IC-00000043",
+  "readOnly" : false,
+  "environment" : {
+    "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+    "name" : "Staging",
+    "titleCss" : ".title {\n\tcolor: #d1e4f7;\n\tbackground-color: #2991e2;\n}",
+    "updated" : [ 1970, 1, 1, 0, 0 ],
+    "created" : [ 1970, 1, 1, 0, 0 ],
+    "domain" : {
+      "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+      "name" : null,
+      "timeZone" : null,
+      "applicationURL" : null,
+      "awsRegion" : null,
+      "environments" : null,
+      "updated" : null,
+      "created" : null
+    }
+  },
+  "domain" : {
+    "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+    "name" : "Ignition",
+    "timeZone" : "America/New_York",
+    "applicationURL" : "http://demo.ignitiontransform.com",
+    "awsRegion" : "us-east-1",
+    "environments" : null,
+    "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
+    "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+  },
+  "version" : 17,
+  "updated" : [ 2018, 10, 4, 14, 22, 49, 864000000 ],
+  "created" : [ 2018, 10, 4, 13, 49, 25, 633000000 ],
+  "folder" : {
+    "id" : "80e72d5e-79b9-4189-9f90-6d9ce0352cac"
+  }
+}
