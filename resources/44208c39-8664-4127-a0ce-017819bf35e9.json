@@ -1,0 +1,40 @@
+{
+  "id" : "44208c39-8664-4127-a0ce-017819bf35e9",
+  "name" : "Kibo",
+  "desc" : "Kibo",
+  "resourceType" : "Script",
+  "source" : "var KIBO = KIBO || {};\n\nKIBO.GetCatalog = function() {\n    var str2Authorize = '!{Kibo-User}:!{Kibo-Pwd}';\n\tvar authorizationStr = java.util.Base64.Encoder.encodeToString(ICT.TOUTF8ARRAY(str2Authorize));\n\t\n\tvar authParams = {};\n\tauthParams['Kibo-Manufacturer-Id'] = '!{Kibo-Mfr-Id}';\n\tauthParams['Kibo-Catalog-Id'] = '!{Kibo-Catalog-Id}';\n\tauthParams.Authorization = 'Basic ' + authorizationStr;\n\t\n\tvar url = '!{Kibo-Product-Url}?manufacturerID=!{Kibo-Mfr-Id';\n\tvar response = ICT.REST.GET(url, \"\", authParams);\n\t\n\treturn response.collection;\n};",
+  "domain" : {
+    "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+    "name" : null,
+    "timeZone" : null,
+    "applicationURL" : null,
+    "awsRegion" : null,
+    "environments" : null,
+    "updated" : null,
+    "created" : null
+  },
+  "displayValue" : "var KIBO = KIBO || {};\n\nKIBO.GetCatalog = function() {\n    var str2Authorize = '!{Kibo-User}:!{Kibo-Pwd}';\n\tvar authorizationStr = java.util.Base64.Encoder.encodeToString(ICT.TOUTF8ARRAY(str2Authorize));\n",
+  "environment" : {
+    "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
+    "name" : "Staging",
+    "titleCss" : ".title {\n\tcolor: #d1e4f7;\n\tbackground-color: #2991e2;\n}",
+    "updated" : [ 1970, 1, 1, 0, 0 ],
+    "created" : [ 1970, 1, 1, 0, 0 ],
+    "domain" : {
+      "id" : "bd629e46-0892-4060-abe4-fc7269247405",
+      "name" : null,
+      "timeZone" : null,
+      "applicationURL" : null,
+      "awsRegion" : null,
+      "environments" : null,
+      "updated" : null,
+      "created" : null
+    }
+  },
+  "created" : [ 2018, 10, 4, 13, 49, 25, 664000000 ],
+  "updated" : [ 2018, 10, 4, 13, 49, 25, 664000000 ],
+  "version" : 5,
+  "folder" : { },
+  "readOnly" : false
+}
