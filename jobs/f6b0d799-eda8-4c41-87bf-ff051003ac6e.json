@@ -1,8 +1,8 @@
 {
   "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
   "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-  "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-  "enabled" : true,
+  "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+  "enabled" : false,
   "tasks" : [ {
     "id" : "aa7ffd69-5ede-4fb3-be79-521143e2731c",
     "ordinal" : 1,
@@ -15,8 +15,8 @@
       "valueType" : 0,
       "refId" : "4f75fa01-c582-49aa-8f20-1b48462a8b28",
       "refValue" : "johnny.appleseed",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 795000000 ],
-      "updated" : [ 2018, 10, 16, 15, 1, 24, 133000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 795000000 ],
+      "updated" : [ 2018, 10, 16, 11, 1, 24, 133000000 ]
     }, {
       "id" : "fb31ade5-b1c3-4789-840b-23505803dd0f",
       "ordinal" : 2,
@@ -26,8 +26,8 @@
       "valueType" : 0,
       "refId" : "48fbf631-e014-45ee-a8eb-298ac7d1fa21",
       "refValue" : "somepassword",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 806000000 ],
-      "updated" : [ 2018, 10, 16, 15, 1, 30, 703000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 806000000 ],
+      "updated" : [ 2018, 10, 16, 11, 1, 30, 703000000 ]
     }, {
       "id" : "cc98b4d5-f310-4c66-b6fc-3bcc57181cc9",
       "ordinal" : 3,
@@ -37,8 +37,8 @@
       "valueType" : 0,
       "refId" : "45c250b3-72b5-4d81-a392-6ab7c6f5709d",
       "refValue" : "ftp://someftphost/input/*.xml",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 815000000 ],
-      "updated" : [ 2018, 10, 16, 15, 1, 47, 209000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 815000000 ],
+      "updated" : [ 2018, 10, 16, 11, 1, 47, 209000000 ]
     }, {
       "id" : "c8f9660a-ef60-48bd-80ac-46b93f2060ca",
       "ordinal" : 4,
@@ -48,8 +48,8 @@
       "valueType" : 0,
       "refId" : "201b77ea-8e35-4c3c-9f45-dd8afc123e10",
       "refValue" : "OutputFileKey",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 823000000 ],
-      "updated" : [ 2018, 10, 16, 11, 17, 36, 430000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 823000000 ],
+      "updated" : [ 2018, 10, 16, 7, 17, 36, 430000000 ]
     }, {
       "id" : "e948b821-8bbe-4ffd-86aa-2934ccfcd077",
       "ordinal" : 5,
@@ -59,8 +59,8 @@
       "valueType" : 2,
       "refId" : "5f033806-4a10-45cc-8624-047cfc4bfb93",
       "refValue" : "function filter(files) {\n\treturn files;\n}",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 846000000 ],
-      "updated" : [ 2018, 10, 16, 15, 1, 3, 846000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 846000000 ],
+      "updated" : [ 2018, 10, 16, 11, 1, 3, 846000000 ]
     }, {
       "id" : "091b8ba7-21d9-48a4-8470-47f24acac0bf",
       "ordinal" : 6,
@@ -70,14 +70,14 @@
       "valueType" : 2,
       "refId" : "8ff654e9-a4bf-4eee-b00e-b5a443e6ee2c",
       "refValue" : "function sort(files) {\n   return files;\n}",
-      "created" : [ 2018, 10, 16, 15, 1, 3, 857000000 ],
-      "updated" : [ 2018, 10, 16, 15, 1, 3, 857000000 ]
+      "created" : [ 2018, 10, 16, 11, 1, 3, 857000000 ],
+      "updated" : [ 2018, 10, 16, 11, 1, 3, 857000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -97,13 +97,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "Download File to Dictionary Task",
     "clazz" : "core.DownloadFileToDictionaryTask",
@@ -115,8 +116,8 @@
     "notify" : false,
     "nodeEligible" : true,
     "interval" : 0,
-    "created" : [ 2018, 10, 16, 15, 1, 3, 777000000 ],
-    "updated" : [ 2018, 10, 16, 15, 17, 25, 665000000 ],
+    "created" : [ 2018, 10, 16, 11, 1, 3, 777000000 ],
+    "updated" : [ 2018, 10, 16, 11, 17, 25, 665000000 ],
     "nodeTask" : false
   }, {
     "id" : "52296294-eeac-43b3-9672-c81302718d98",
@@ -130,8 +131,8 @@
       "valueType" : 0,
       "refId" : "33b71961-09fb-4f69-9df8-46721a14b8a4",
       "refValue" : "InputFileKey",
-      "created" : [ 2018, 10, 16, 15, 17, 20, 785000000 ],
-      "updated" : [ 2018, 10, 16, 11, 17, 48, 409000000 ]
+      "created" : [ 2018, 10, 16, 11, 17, 20, 785000000 ],
+      "updated" : [ 2018, 10, 16, 7, 17, 48, 409000000 ]
     }, {
       "id" : "d2e36eb6-9b9a-40b0-abba-48620d2d1153",
       "ordinal" : 2,
@@ -141,8 +142,8 @@
       "valueType" : 0,
       "refId" : "f1628808-0116-4d32-bff0-af0cb53d06b2",
       "refValue" : "OutputKey",
-      "created" : [ 2018, 10, 16, 15, 17, 20, 924000000 ],
-      "updated" : [ 2018, 10, 16, 11, 17, 55, 455000000 ]
+      "created" : [ 2018, 10, 16, 11, 17, 20, 924000000 ],
+      "updated" : [ 2018, 10, 16, 7, 17, 55, 455000000 ]
     }, {
       "id" : "0d44b98d-ccd0-4e19-846f-2193a2ca5afa",
       "ordinal" : 4,
@@ -152,8 +153,8 @@
       "valueType" : 0,
       "refId" : "4b2145be-b1cc-4152-8be4-5e7d5696b84e",
       "refValue" : "true",
-      "created" : [ 2018, 10, 16, 15, 17, 21, 62000000 ],
-      "updated" : [ 2018, 10, 16, 15, 17, 21, 62000000 ]
+      "created" : [ 2018, 10, 16, 11, 17, 21, 62000000 ],
+      "updated" : [ 2018, 10, 16, 11, 17, 21, 62000000 ]
     }, {
       "id" : "e40e4f40-bc33-4b3d-b322-20ecceaa21f7",
       "ordinal" : 4,
@@ -163,14 +164,14 @@
       "valueType" : 0,
       "refId" : "be88cc2e-5ba9-4277-a484-1d8146b78565",
       "refValue" : "Order",
-      "created" : [ 2018, 10, 16, 15, 17, 21, 199000000 ],
-      "updated" : [ 2018, 10, 16, 11, 18, 28, 595000000 ]
+      "created" : [ 2018, 10, 16, 11, 17, 21, 199000000 ],
+      "updated" : [ 2018, 10, 16, 7, 18, 28, 595000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -190,13 +191,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "XML to Dictionary Task",
     "clazz" : "core.XmlToDictionaryTask",
@@ -208,8 +210,8 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 0,
-    "created" : [ 2018, 10, 16, 15, 17, 20, 627000000 ],
-    "updated" : [ 2018, 10, 16, 15, 17, 28, 530000000 ],
+    "created" : [ 2018, 10, 16, 11, 17, 20, 627000000 ],
+    "updated" : [ 2018, 10, 16, 11, 17, 28, 530000000 ],
     "nodeTask" : false
   }, {
     "id" : "9a64dd07-3c56-41dc-88d2-f349cdac478a",
@@ -223,14 +225,14 @@
       "valueType" : 2,
       "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
       "refValue" : "Javascript",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 862000000 ],
-      "updated" : [ 2018, 5, 31, 19, 46, 6, 676000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 862000000 ],
+      "updated" : [ 2018, 5, 31, 15, 46, 6, 676000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -250,13 +252,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "Script Task",
     "comment" : "Prepare data for template.  Execute any business rule",
@@ -269,8 +272,8 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 10,
-    "created" : [ 2018, 2, 1, 13, 23, 14, 859000000 ],
-    "updated" : [ 2018, 10, 16, 15, 21, 12, 890000000 ],
+    "created" : [ 2018, 2, 1, 8, 23, 14, 859000000 ],
+    "updated" : [ 2018, 10, 16, 11, 21, 12, 890000000 ],
     "nodeTask" : false
   }, {
     "id" : "fdca770d-feab-4f9f-bb3d-b5e105180cd6",
@@ -278,20 +281,20 @@
     "taskParameters" : [ {
       "id" : "b956b8bd-03b1-451e-bc4a-16e0f6b3e258",
       "ordinal" : 1,
-      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n$includeScript('weatherAPI');\n\nvar root = new java.util.HashMap();\nvar orders = new java.util.ArrayList();\n\nvar sdf = new java.text.SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ss\");\n\nvar orderIterator = ICT.MAP.ITERATOR('OrdersMap');\nwhile (orderIterator.hasNext()) {\n    var order = orderIterator.next();\n    var shipments = ICT.MAP.LIST(order.shipments.shipment);\n    var payments = ICT.MAP.LIST(order.payments.payment);\n    var record = {\n        OrderDate: order['order-date'],\n        OrderNumber: order['order-no'],\n        OrderContact: order.customer['customer-name'],\n        OrderReferencePONo: order['invoice-no'],\n        FirstName: order.customer['billing-address']['first-name'],\n        LastName: order.customer['billing-address']['last-name'],\n        OrderAmount: order.totals['order-total']['gross-price'],\n        OrderAmountShipping: order.totals['shipping-total']['gross-price'],\n        OrderAmountTax: order.totals['order-total'].tax,\n        OrderShippingAddress1: shipments[0]['shipping-address'].address1,\n        OrderShippingAddress2: shipments[0]['shipping-address'].address2,\n        OrderShippingCity: shipments[0]['shipping-address'].city,\n        OrderShippingStateProvince: shipments[0]['shipping-address']['state-code'],\n        OrderShippingZip: shipments[0]['shipping-address']['postal-code'],\n        OrderShippingPhone: shipments[0]['shipping-address'].phone,\n        OrderShippingCountry: shipments[0]['shipping-address']['country-code'],\n        OrderShippingCountryCode: shipments[0]['shipping-address']['country-code'],\n        OrderCardName: payments[0]['credit-card']['card-holder'],\n        OrderCardType: payments[0]['credit-card']['card-type'],  \n        OrderComeFrom: order['created-by'],\n        WeatherInfo: weatherAPI.byPostalCode(shipments[0]['shipping-address']['postal-code']),\n\n        OrderAuths: [],\n        OrderItems: []\n    };\n  \n    // add our items\n    var orderItemIter = ICT.MAP.LIST(order[\"product-lineitems\"][\"product-lineitem\"]).iterator();\n    while (orderItemIter.hasNext()) {\n        var thisItem = orderItemIter.next();\n        record.OrderItems[record.OrderItems.length] = {\n            ItemProduct: {\n                Price: {\n                    PriceSale: thisItem['net-price']\n                },\n                ProductPartNo: thisItem['product-id'],\n                ProductCode: thisItem['product-name']\n            },\n            OrderNumber: order['order-no'],\n            ItemPrice: thisItem['net-price'],\n            ItemQuantity: thisItem.quantity,\n            ItemTax: thisItem.tax,\n            ItemTotal: thisItem['gross-price']\n        };\n    }\n    orders.add(record);\n}\nroot.put(\"Orders\", orders);\ndict.put(\"Root\", root);\n\n",
+      "value" : "var inDebug = dict.inDebug; \n$includeScript('global');\n$includeScript('weatherAPI');\n\nvar root = new java.util.HashMap();\nvar orders = new java.util.ArrayList();\n\nvar sdf = new java.text.SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ss\");\n\nvar orderIterator = ICT.MAP.ITERATOR('OrdersMap');\nwhile (orderIterator.hasNext()) {\n    var order = orderIterator.next();\n    var shipments = ICT.MAP.LIST(order.shipments.shipment);\n    var payments = ICT.MAP.LIST(order.payments.payment); \n    var record = {\n        OrderDate: order['order-date'],\n        OrderNumber: order['order-no'],\n        OrderContact: order.customer['customer-name'],\n        OrderReferencePONo: order['invoice-no'],\n        FirstName: order.customer['billing-address']['first-name'],\n        LastName: order.customer['billing-address']['last-name'],\n        OrderAmount: order.totals['order-total']['gross-price'],\n        OrderAmountShipping: order.totals['shipping-total']['gross-price'],\n        OrderAmountTax: order.totals['order-total'].tax,\n        OrderShippingAddress1: shipments[0]['shipping-address'].address1,\n        OrderShippingAddress2: shipments[0]['shipping-address'].address2,\n        OrderShippingCity: shipments[0]['shipping-address'].city,\n        OrderShippingStateProvince: shipments[0]['shipping-address']['state-code'],\n        OrderShippingZip: shipments[0]['shipping-address']['postal-code'],\n        OrderShippingPhone: shipments[0]['shipping-address'].phone,\n        OrderShippingCountry: shipments[0]['shipping-address']['country-code'],\n        OrderShippingCountryCode: shipments[0]['shipping-address']['country-code'],\n        OrderCardName: payments[0]['credit-card']['card-holder'],\n        OrderCardType: payments[0]['credit-card']['card-type'],  \n        OrderComeFrom: order['created-by'],\n        WeatherInfo: weatherAPI.byPostalCode(shipments[0]['shipping-address']['postal-code']),\n\n        OrderAuths: [],\n        OrderItems: []\n    };\n  \n    // add our items\n    var orderItemIter = ICT.MAP.LIST(order[\"product-lineitems\"][\"product-lineitem\"]).iterator();\n    while (orderItemIter.hasNext()) {\n        var thisItem = orderItemIter.next();\n        record.OrderItems[record.OrderItems.length] = {\n            ItemProduct: {\n                Price: {\n                    PriceSale: thisItem['net-price']\n                },\n                ProductPartNo: thisItem['product-id'],\n                ProductCode: thisItem['product-name']\n            },\n            OrderNumber: order['order-no'],\n            ItemPrice: thisItem['net-price'],\n            ItemQuantity: thisItem.quantity,\n            ItemTax: thisItem.tax,\n            ItemTotal: thisItem['gross-price']\n        };\n    }\n    orders.add(record);\n}\nroot.put(\"Orders\", orders);\ndict.put(\"Root\", root);\n\n",
       "desc" : "Script to execute",
       "name" : "script",
       "valueType" : 2,
       "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
       "refValue" : "Javascript",
-      "created" : [ 2018, 5, 31, 19, 28, 31, 613000000 ],
-      "updated" : [ 2018, 10, 16, 11, 21, 25, 333000000 ]
+      "created" : [ 2018, 5, 31, 15, 28, 31, 613000000 ],
+      "updated" : [ 2018, 10, 16, 13, 38, 26, 363000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -311,13 +314,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "Script Task",
     "comment" : "Example of Map to XML",
@@ -330,8 +334,8 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 0,
-    "created" : [ 2018, 5, 31, 19, 28, 31, 601000000 ],
-    "updated" : [ 2018, 10, 16, 15, 21, 14, 150000000 ],
+    "created" : [ 2018, 5, 31, 15, 28, 31, 601000000 ],
+    "updated" : [ 2018, 10, 16, 11, 21, 14, 150000000 ],
     "nodeTask" : false
   }, {
     "id" : "e978e36a-a392-4d2d-b3b1-d2247cd65b5d",
@@ -345,8 +349,8 @@
       "valueType" : 0,
       "refId" : "e2963db8-9c7d-4863-b1ec-7a1bf15dbd52",
       "refValue" : "InputKey",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 895000000 ],
-      "updated" : [ 2018, 2, 1, 13, 23, 14, 900000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 895000000 ],
+      "updated" : [ 2018, 2, 1, 8, 23, 14, 900000000 ]
     }, {
       "id" : "a1aed81f-259c-49ab-8f89-e11bc737afc7",
       "ordinal" : 2,
@@ -356,8 +360,8 @@
       "valueType" : 2,
       "refId" : "ed2bc33b-2474-4c9f-a7bb-80183abe53cf",
       "refValue" : "<xml version=\"1.0\"><test>${test}</test>",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 903000000 ],
-      "updated" : [ 2018, 5, 31, 19, 30, 48, 868000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 903000000 ],
+      "updated" : [ 2018, 5, 31, 15, 30, 48, 868000000 ]
     }, {
       "id" : "dba34bc8-5aa1-4574-8d4f-8bd7d71429eb",
       "ordinal" : 3,
@@ -367,14 +371,14 @@
       "valueType" : 0,
       "refId" : "be1f40ef-6389-4aa3-9124-4231b715107a",
       "refValue" : "OutputKey",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 940000000 ],
-      "updated" : [ 2018, 2, 1, 13, 23, 14, 946000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 940000000 ],
+      "updated" : [ 2018, 2, 1, 8, 23, 14, 946000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -394,13 +398,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "Freemarker Execute Task",
     "comment" : "Format for aptos schema",
@@ -413,8 +418,8 @@
     "notify" : false,
     "nodeEligible" : false,
     "interval" : 10,
-    "created" : [ 2018, 2, 1, 13, 23, 14, 892000000 ],
-    "updated" : [ 2018, 10, 16, 15, 17, 26, 628000000 ],
+    "created" : [ 2018, 2, 1, 8, 23, 14, 892000000 ],
+    "updated" : [ 2018, 10, 16, 11, 17, 26, 628000000 ],
     "nodeTask" : false
   }, {
     "id" : "9441c11b-82f0-42fb-acd2-9a498a63703a",
@@ -428,8 +433,8 @@
       "valueType" : 0,
       "refId" : "a68a11c6-cef6-4408-85f5-4f0728e8e3c7",
       "refValue" : "johnny.appleseed",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 953000000 ],
-      "updated" : [ 2018, 2, 1, 13, 23, 14, 958000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 953000000 ],
+      "updated" : [ 2018, 2, 1, 8, 23, 14, 958000000 ]
     }, {
       "id" : "0860d6e8-db10-41b1-939e-252986df3cef",
       "ordinal" : 2,
@@ -439,8 +444,8 @@
       "valueType" : 0,
       "refId" : "a34fea04-c5b1-442c-975e-1655184f32f3",
       "refValue" : "somepassword",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 961000000 ],
-      "updated" : [ 2018, 8, 27, 18, 1, 31, 767000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 961000000 ],
+      "updated" : [ 2018, 8, 27, 14, 1, 31, 767000000 ]
     }, {
       "id" : "1fae6c3a-f7e0-4165-95d4-b115d7c61bb0",
       "ordinal" : 3,
@@ -450,8 +455,8 @@
       "valueType" : 2,
       "refId" : "b102d706-66ce-4d8b-8944-ec8ba327b7b2",
       "refValue" : "ftp://someftphost/input/myfile.xml",
-      "created" : [ 2018, 2, 1, 13, 23, 14, 974000000 ],
-      "updated" : [ 2018, 2, 1, 13, 23, 14, 980000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 14, 974000000 ],
+      "updated" : [ 2018, 2, 1, 8, 23, 14, 980000000 ]
     }, {
       "id" : "1bd9d6b7-96fc-478d-9dac-72e4f61b1fd8",
       "ordinal" : 4,
@@ -461,14 +466,14 @@
       "valueType" : 0,
       "refId" : "06532b8a-daf2-457c-8c65-701e9cc0ec01",
       "refValue" : "InputFileKey",
-      "created" : [ 2018, 2, 1, 13, 23, 15, 183000000 ],
-      "updated" : [ 2018, 2, 1, 13, 23, 15, 192000000 ]
+      "created" : [ 2018, 2, 1, 8, 23, 15, 183000000 ],
+      "updated" : [ 2018, 2, 1, 8, 23, 15, 192000000 ]
     } ],
     "job" : {
       "id" : "f6b0d799-eda8-4c41-87bf-ff051003ac6e",
       "name" : "Demo Commerce Cloud Orders to Aptos Orders",
-      "lastRun" : [ 2018, 2, 1, 13, 27, 2, 666000000 ],
-      "enabled" : true,
+      "lastRun" : [ 2018, 2, 1, 8, 27, 2, 666000000 ],
+      "enabled" : false,
       "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
       "status" : "READY",
       "key" : "IC-00000003",
@@ -488,13 +493,14 @@
         "applicationURL" : "http://demo.ignitiontransform.com",
         "awsRegion" : "us-east-1",
         "environments" : null,
-        "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-        "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+        "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+        "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 55,
-      "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-      "created" : [ 1970, 1, 1, 0, 0 ],
-      "folder" : { }
+      "version" : 56,
+      "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+      "created" : [ 1969, 12, 31, 19, 0 ],
+      "folder" : { },
+      "scheduleCron" : ""
     },
     "name" : "Upload File from Dictionary Task",
     "comment" : "Upload to ftps",
@@ -507,8 +513,8 @@
     "notify" : false,
     "nodeEligible" : true,
     "interval" : 10,
-    "created" : [ 2018, 2, 1, 13, 23, 14, 950000000 ],
-    "updated" : [ 2018, 10, 16, 15, 17, 26, 859000000 ],
+    "created" : [ 2018, 2, 1, 8, 23, 14, 950000000 ],
+    "updated" : [ 2018, 10, 16, 11, 17, 26, 859000000 ],
     "nodeTask" : false
   } ],
   "desc" : "Demo Commerce Cloud Orders to Aptos Orders",
@@ -519,8 +525,8 @@
     "id" : "89689ad1-f311-4bd7-aacd-0188ded73369",
     "name" : "Staging",
     "titleCss" : ".title {\n\tcolor: #d1e4f7;\n\tbackground-color: #2991e2;\n}",
-    "updated" : [ 1970, 1, 1, 0, 0 ],
-    "created" : [ 1970, 1, 1, 0, 0 ],
+    "updated" : [ 1969, 12, 31, 19, 0 ],
+    "created" : [ 1969, 12, 31, 19, 0 ],
     "domain" : {
       "id" : "bd629e46-0892-4060-abe4-fc7269247405",
       "name" : null,
@@ -539,11 +545,12 @@
     "applicationURL" : "http://demo.ignitiontransform.com",
     "awsRegion" : "us-east-1",
     "environments" : null,
-    "updated" : [ 1970, 1, 18, 14, 19, 5, 459000000 ],
-    "created" : [ 1970, 1, 18, 14, 19, 5, 459000000 ]
+    "updated" : [ 1970, 1, 18, 9, 19, 5, 459000000 ],
+    "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
   },
-  "version" : 55,
-  "updated" : [ 2018, 10, 16, 15, 21, 25, 515000000 ],
-  "created" : [ 1970, 1, 1, 0, 0 ],
-  "folder" : { }
+  "version" : 56,
+  "updated" : [ 2018, 10, 16, 14, 6, 52, 948000000 ],
+  "created" : [ 1969, 12, 31, 19, 0 ],
+  "folder" : { },
+  "scheduleCron" : ""
 }
