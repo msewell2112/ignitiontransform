@@ -94,8 +94,8 @@
         "updated" : [ 2018, 10, 16, 14, 33, 20, 313000000 ],
         "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 44,
-      "updated" : [ 2019, 3, 18, 14, 25, 37, 680000000 ],
+      "version" : 45,
+      "updated" : [ 2019, 4, 8, 18, 43, 43, 21000000 ],
       "created" : [ 2019, 3, 7, 7, 43, 53, 898000000 ],
       "folder" : { }
     },
@@ -204,8 +204,8 @@
         "updated" : [ 2018, 10, 16, 14, 33, 20, 313000000 ],
         "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 44,
-      "updated" : [ 2019, 3, 18, 14, 25, 37, 680000000 ],
+      "version" : 45,
+      "updated" : [ 2019, 4, 8, 18, 43, 43, 21000000 ],
       "created" : [ 2019, 3, 7, 7, 43, 53, 898000000 ],
       "folder" : { }
     },
@@ -229,14 +229,14 @@
     "taskParameters" : [ {
       "id" : "631415b1-aba0-4d8e-8171-c3d43105198e",
       "ordinal" : 1,
-      "value" : "let inDebug = dict.inDebug; \n$includeScript('global');\n\nlet dictionaryToXMLTask = ICT.TASK('DictionaryToXMLTask');\n// start with a sequence of 10, this will be customer-no\nvar sequence = 10;\nlet JavaString = Java.type('java.lang.String');\nlet MIFIClass = Java.type('com.ignitioncommerce.transform.util.MapInFileIterator');\nvar customers = {\n    'customer-list': {\n        '@xmlns': 'http://www.demandware.com/xml/impex/customer/2006-10-31',\n        '@list-id': 'Lax',\n    }\n};\nvar idx = 1;\nvar customerIterator = new MIFIClass(dict.get('JOB').getDomain(),  dict.get('CustomersMap'));\nwhile (customerIterator.hasNext()) {\n    let customer = customerIterator.next();\n    var gender = '';\n    if (customer.get('8') === 'Male') {\n        gender = 2;\n    } else if (customer.get('8') == 'Female') {\n        gender = 1;\n    }\n    // for now, let's just do 10\n    if (idx === 10) break;\n    \n    var brainTreeId = customer.get('3');\n\n    if (customer.get('0') !== '') {\n        customers['customer-list']['customer['+idx+']'] = {\n            '@customer-no': JavaString.format(\"D%08d\", sequence++),\n            'credentials': {\n                'login': customer.get('0'),\n                'enabled-flag': true,\n            },\n            'profile': {\n                'first-name': customer.get('7'),\n                'last-name': customer.get('10'),\n                'email': customer.get('0'),\n                'gender': gender,\n                'custom-attributes': {\n                    'custom-attribute[0]': {\n                        '@attribute-id': 'legacyCustomer',\n                        '_text': 'true'\n                    },\n                    'custom-attribute[1]': {\n                        '@attribute-id': 'isBraintree',\n                        '_text': brainTreeId === '' ? 'false': 'true'\n                    },\n                    'custom-attribute[2]': {\n                        '@attribute-id': 'braintreeCustomerId',\n                        '_text': brainTreeId\n                    }\n                }\n            },\n            'addresses': {\n                \n            }\n        };\n        // addresses may not exist\n        if (customer.get('25') !== '') {\n            customers['customer-list']['customer['+idx+']'].addresses.address = {\n                '@address-id': 'Home',\n                '@preferred': true,\n                'first-name': customer.get('29'),\n                'last-name': customer.get('30'),\n                'company-name': customer.get('26'),\n                'address1': customer.get('35'),\n                'address2': customer.get('36'),\n                'city': customer.get('25'),\n                'postal-code': customer.get('32'),\n                'state-code': customer.get('34'),\n                'country-code': customer.get('27'),\n                'phone': customer.get('37')\n            };\n        }\n        idx++;\n    }\n}\nvar xml = dictionaryToXMLTask.script(dict, customers, null);\nvar newXml = xml.getBytes();\n\n",
+      "value" : "let inDebug = dict.inDebug; \n$includeScript('global');\n\nlet dictionaryToXMLTask = ICT.TASK('DictionaryToXMLTask');\n// start with a sequence of 10, this will be customer-no\nvar sequence = 10;\nlet JavaString = Java.type('java.lang.String');\nlet MIFIClass = Java.type('com.ignitioncommerce.transform.util.MapInFileIterator');\nvar customers = {\n    'customer-list': {\n        '@xmlns': 'http://www.demandware.com/xml/impex/customer/2006-10-31',\n        '@list-id': 'Lax',\n    }\n};\nvar idx = 1;\nvar customerIterator = new MIFIClass(dict.get('JOB').getDomain(),  dict.get('CustomersMap'));\nwhile (customerIterator.hasNext()) {\n    let customer = customerIterator.next();\n    var gender = '';\n    if (customer.get('8') === 'Male') {\n        gender = 2;\n    } else if (customer.get('8') == 'Female') {\n        gender = 1;\n    }\n    // for now, let's just do 10\n    //if (idx === 10) break;\n    \n    var brainTreeId = customer.get('3');\n\n    if (customer.get('0') !== '') {\n        customers['customer-list']['customer['+idx+']'] = {\n            '@customer-no': JavaString.format(\"D%08d\", sequence++),\n            'credentials': {\n                'login': customer.get('0'),\n                'enabled-flag': true,\n            },\n            'profile': {\n                'first-name': customer.get('7'),\n                'last-name': customer.get('10'),\n                'email': customer.get('0'),\n                'gender': gender,\n                'custom-attributes': {\n                    'custom-attribute[0]': {\n                        '@attribute-id': 'legacyCustomer',\n                        '_text': 'true'\n                    },\n                    'custom-attribute[1]': {\n                        '@attribute-id': 'isBraintree',\n                        '_text': brainTreeId === '' ? 'false': 'true'\n                    },\n                    'custom-attribute[2]': {\n                        '@attribute-id': 'braintreeCustomerId',\n                        '_text': brainTreeId\n                    }\n                }\n            },\n            'addresses': {\n                \n            }\n        };\n        // addresses may not exist\n        if (customer.get('25') !== '') {\n            customers['customer-list']['customer['+idx+']'].addresses.address = {\n                '@address-id': 'Home',\n                '@preferred': true,\n                'first-name': customer.get('29'),\n                'last-name': customer.get('30'),\n                'company-name': customer.get('26'),\n                'address1': customer.get('35'),\n                'address2': customer.get('36'),\n                'city': customer.get('25'),\n                'postal-code': customer.get('32'),\n                'state-code': customer.get('34'),\n                'country-code': customer.get('27'),\n                'phone': customer.get('37')\n            };\n        }\n        idx++;\n    }\n}\nvar xml = dictionaryToXMLTask.script(dict, customers, null);\nvar newXml = xml.getBytes();\n\n",
       "desc" : "Script to execute",
       "name" : "script",
       "valueType" : 2,
       "refId" : "61734d1c-1ff6-4a2b-a251-00f3bd76b9ed",
       "refValue" : "Javascript",
       "created" : [ 2019, 3, 7, 7, 43, 53, 909000000 ],
-      "updated" : [ 2019, 3, 18, 10, 24, 29, 880000000 ]
+      "updated" : [ 2019, 4, 8, 14, 43, 43, 14000000 ]
     } ],
     "job" : {
       "id" : "fc39d4cd-09ae-428d-bd9c-5ca45b752673",
@@ -259,8 +259,8 @@
         "updated" : [ 2018, 10, 16, 14, 33, 20, 313000000 ],
         "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 44,
-      "updated" : [ 2019, 3, 18, 14, 25, 37, 680000000 ],
+      "version" : 45,
+      "updated" : [ 2019, 4, 8, 18, 43, 43, 21000000 ],
       "created" : [ 2019, 3, 7, 7, 43, 53, 898000000 ],
       "folder" : { }
     },
@@ -358,8 +358,8 @@
         "updated" : [ 2018, 10, 16, 14, 33, 20, 313000000 ],
         "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
       },
-      "version" : 44,
-      "updated" : [ 2019, 3, 18, 14, 25, 37, 680000000 ],
+      "version" : 45,
+      "updated" : [ 2019, 4, 8, 18, 43, 43, 21000000 ],
       "created" : [ 2019, 3, 7, 7, 43, 53, 898000000 ],
       "folder" : { }
     },
@@ -401,8 +401,8 @@
     "updated" : [ 2018, 10, 16, 14, 33, 20, 313000000 ],
     "created" : [ 1970, 1, 18, 9, 19, 5, 459000000 ]
   },
-  "version" : 44,
-  "updated" : [ 2019, 3, 18, 14, 25, 37, 680000000 ],
+  "version" : 45,
+  "updated" : [ 2019, 4, 8, 18, 43, 43, 21000000 ],
   "created" : [ 2019, 3, 7, 7, 43, 53, 898000000 ],
   "folder" : { }
 }
